@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6579447003688810954}
   - component: {fileID: 5126495804102983020}
   m_Layer: 0
-  m_Name: Optaculo (5)
+  m_Name: Obstaculo 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
