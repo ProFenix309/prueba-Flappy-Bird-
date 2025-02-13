@@ -29,21 +29,26 @@ public class Controlador_Juego : MonoBehaviour
 
     public void IniciarJuego()
     {
+        Time.timeScale = 1f;
         JuegoIniciadoEvento?.Invoke();
     }
 
     public void PausarJuego()
     {
+        Time.timeScale = 0f;
         JuegoPausadoEvento?.Invoke();
     }
 
     public void FinJuego()
     {
+        Time.timeScale = 0f;
         JuegoFinalizadoEvento?.Invoke();
     }
 
     public void ReanudarJuego()
     {
+        Time.timeScale = 1f;
+
         JuegoReanudadoEvento?.Invoke();
     }
 
