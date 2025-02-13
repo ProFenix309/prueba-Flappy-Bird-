@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class Chunk : MonoBehaviour
 {
-    [SerializeField] List<Transform> pivotes = new List<Transform>(); 
+    [SerializeField] List<Transform> pivotes = new List<Transform>();
+
+    List<GameObject> obstaculosInstanciados = new List<GameObject>();
+    
 
     // Start is called before the first frame update
     void Start()
@@ -14,10 +17,23 @@ public class Chunk : MonoBehaviour
 
     public void GenerarOptaculos()
     {
+        EliminarObstacilos();
+
         for (int i = 0; i < pivotes.Count; i++)
         {
-            GameObject obstaculo = (GameObject)Instantiate(Resources.Load("Obstaculo 1"), pivotes[i]);
+            int numeroAleatorio = Random.Range(1,6);
+            GameObject obstaculo = (GameObject)Instantiate(Resources.Load("Obstaculo " + numeroAleatorio), pivotes[i]);
             obstaculo.transform.localPosition = Vector3.zero;
+            obstaculosInstanciados.Add(obstaculo);
         }
+    }
+    public void EliminarObstacilos()
+    {
+        for(int i = 0;  i < obstaculosInstanciados.Count; i++)
+        {
+            Destroy(obstaculosInstanciados[i]);
+        }
+
+        obstaculosInstanciados.Clear();
     }
 }

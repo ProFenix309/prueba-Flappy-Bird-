@@ -5,7 +5,7 @@ using UnityEngine;
 public class ControladorChumk : MonoBehaviour
 {
 
-    [SerializeField] List<Transform> chunk = new List<Transform>();
+    [SerializeField] List<Chunk> chunk = new List<Chunk>();
     [SerializeField] Transform ultimoChunk;
 
     [SerializeField] float velocidad;
@@ -21,13 +21,14 @@ public class ControladorChumk : MonoBehaviour
     {
         for (int i = 0; i < chunk.Count; i++)
         {
-            chunk[i].Translate(Vector3.left * velocidad * Time.deltaTime, Space.World);
-
-            if (chunk[i].position.x <= -7)
+            if (chunk[i].transform.position.x <= -7)
             {
-                chunk[i].position = ultimoChunk.position + (Vector3.right * 7);
-                ultimoChunk = chunk[i];
+                chunk[i].transform.position = ultimoChunk.position + (Vector3.right * 7);
+                ultimoChunk = chunk[i].transform;
+                chunk[i].GenerarOptaculos();
             }
+
+            chunk[i].transform.Translate(Vector3.left * velocidad * Time.deltaTime, Space.World);
         }
     }
 }
