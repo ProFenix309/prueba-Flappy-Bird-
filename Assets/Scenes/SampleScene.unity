@@ -1524,13 +1524,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 718909355}
+  - component: {fileID: 718909356}
   m_Layer: 5
   m_Name: Findel juego
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &718909355
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1551,6 +1552,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &718909356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 718909354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f19e12ffec4657f4dafbb174e3c05b44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textoPunto: {fileID: 450718301}
 --- !u!1 &731524363
 GameObject:
   m_ObjectHideFlags: 0
@@ -2745,7 +2759,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae9d9dfa2af4dff478d925df5e32b402, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puntajeAcual: 0
 --- !u!1 &1284908490
 GameObject:
   m_ObjectHideFlags: 0

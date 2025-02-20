@@ -11,8 +11,8 @@ public class Controlador_Puntaje : MonoBehaviour
     public ActualisacionesDelegate MejorPuntajeActualizado;
 
 
-    [SerializeField]int puntajeAcual = 0;
-    int mejorPuntaje = 0;
+     private int puntajeAcual = 0;
+     private int mejorPuntaje = 0;
 
     private void Awake()
     {
@@ -53,6 +53,11 @@ public class Controlador_Puntaje : MonoBehaviour
         {
             PlayerPrefs.SetInt("Mejor_Puntaje", puntajeAcual);
         }    
+    }
+
+    public int ObtenerPuntage()
+    {
+        return puntajeAcual; 
     }
 
    
