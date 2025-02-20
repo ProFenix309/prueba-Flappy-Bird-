@@ -25,4 +25,12 @@ public class movimiento : MonoBehaviour
         rigid.velocity = new Vector2(0, jumpForce);
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Respawn"))
+        {
+            Controlador_Juego.Instania.FinJuego();
+        }
+
+    }
 }

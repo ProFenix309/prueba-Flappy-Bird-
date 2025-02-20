@@ -5,16 +5,19 @@ using UnityEngine;
 public class Chunk : MonoBehaviour
 {
     [SerializeField] List<Transform> pivotes = new List<Transform>();
+    [SerializeField]List<GameObject> obstaculosInstanciados = new List<GameObject>();
 
-    List<GameObject> obstaculosInstanciados = new List<GameObject>();
-    
+    [SerializeField] bool instanciar;
 
     // Start is called before the first frame update
     void Start()
     {
-        GenerarOptaculos();
+        if (instanciar) 
+        {
+            GenerarOptaculos();
+        }
     }
-
+    
     public void GenerarOptaculos()
     {
         EliminarObstacilos();

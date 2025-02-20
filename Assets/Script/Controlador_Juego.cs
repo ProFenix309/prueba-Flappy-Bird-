@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Controlador_Juego : MonoBehaviour
 {
@@ -56,4 +57,10 @@ public class Controlador_Juego : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void ReiniciarJuego()
+    {
+        SceneManager.LoadScene("SampleScene");
+    }
+
 }
