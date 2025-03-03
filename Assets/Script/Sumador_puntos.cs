@@ -9,6 +9,7 @@ public class Sumador_puntos : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             Controlador_Puntaje.Instancia.SumarPunto();
+            
         }
     }
 }

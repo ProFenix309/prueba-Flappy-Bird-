@@ -4,28 +4,22 @@ using UnityEngine;
 
 public class Paticula_controller : MonoBehaviour
 {
+    [SerializeField] ParticleSystem particulasPuntos,particulasMuerte;
 
-    [SerializeField] ParticleSystem particulas;
-    // Start is called before the first frame update
-    void Start()
+    private void Update()
     {
-        particulas = GetComponent<ParticleSystem>();
+        Controlador_Puntaje.Instancia.activarParticle += ActivarParticulaPuntos;
+        Controlador_Juego.Instania.JuegoFinalizadoEvento += ActivarParticulaMuerte;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-       
-    }
 
-    void PaticulaPuntos ()
+    void ActivarParticulaPuntos()
     {
-        particulas.Play();
+        particulasPuntos.Play();
     }
-
-    void PaticulaMuerte()
+    void ActivarParticulaMuerte()
     {
-        particulas.Play();
+        particulasMuerte.Play();
     }
 
 }

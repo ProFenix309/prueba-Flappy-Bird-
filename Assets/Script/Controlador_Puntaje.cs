@@ -10,6 +10,8 @@ public class Controlador_Puntaje : MonoBehaviour
     public ActualisacionesDelegate PuntajeActualizado;
     public ActualisacionesDelegate MejorPuntajeActualizado;
 
+    public delegate void ActivarParticle();
+    public ActivarParticle activarParticle;
 
      private int puntajeAcual = 0;
      private int mejorPuntaje = 0;
@@ -36,6 +38,7 @@ public class Controlador_Puntaje : MonoBehaviour
     {
         puntajeAcual++;
         PuntajeActualizado?.Invoke(puntajeAcual);
+        activarParticle?.Invoke();
     }
 
     public void CagarMejorPuntaje()

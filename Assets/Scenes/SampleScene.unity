@@ -3171,7 +3171,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -8167,7 +8167,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 1
   autoRandomSeed: 1
   startDelay:
@@ -13091,7 +13091,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e51dbd924275ad46ababbce1360023a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particulas: {fileID: 1558745780}
+  particulasPuntos: {fileID: 1558745780}
+  particulasMuerte: {fileID: 1667307231}
 --- !u!1 &1756911094
 GameObject:
   m_ObjectHideFlags: 0
